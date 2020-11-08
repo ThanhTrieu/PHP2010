@@ -1,0 +1,65 @@
+/* comment css */
+
+/* Id selector */
+
+/*
+#title {
+	color: red;
+}
+*/
+h2.frontend {
+	color: orange;
+}
+
+/* class selector */
+.frontend {
+	color: pink;
+}
+
+/* HTML selector */
+h2 {
+	color: yellow;
+}
+/* attribute selector */
+input[type] {
+	border: 2px solid blue;
+}
+
+input[type='text'] {
+	border: 2px solid red;
+}
+input[class~='input'] {
+	border: 1px dotted green;
+}
+input[class*='inpu'] {
+	border: 2px dotted violet;
+}
+a[href$='t'] {
+	color: red;
+}
+a[href^='https'] {
+	color: green;
+}
+a[class^='link-'] {
+	color: violet;
+}
+p[class|='title'] {
+	color: yellow;
+}
+.button {
+	width: 200px;
+	height: 200px;
+	padding: 3px 8px;
+}
+.button--primary{
+	background-color: pink;
+}
+.button--second {
+	background-color: violet;
+}
+/* selector phan cap */
+.nav__menu .nav__link {
+	color: red;
+}
+
+

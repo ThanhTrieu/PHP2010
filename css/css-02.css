@@ -1,0 +1,111 @@
+/* bien trong css */
+:root {
+	/* tuong duong nhu the html */
+	/* --name */
+	--primaryColor: #ccc;
+	--primaryFont : 'tahoma';
+}
+html {
+	font-family: 'Roboto', sans-serif;
+	font-size: 62.5%;
+}
+
+/* selector phan cap */
+section.box > section.box__content + section.box__content-2 > div.box__child ~ h1.title {
+	color: var(--primaryColor);
+	font-family: var(--primaryFont);
+}
+/* gom nhom selector */
+.content__title, .content__link {
+	font-family: 'tahoma';
+	font-size: 14px;
+	color: red;
+}
+/* .content__link{
+	font-family: 'tahoma';
+	font-size: 14px;
+	color: red;
+} */
+/* pesudo selector */
+
+div.pesudo :first-child {
+	color: red;
+}
+
+div.pesudo :first-of-type {
+	color: blue;
+}
+
+div.pesudo :last-child {
+	color: green;
+}
+div.pesudo :last-of-type {
+	color: violet;
+}
+div.pesudo :nth-last-child(3) {
+	color: pink;
+}
+div.pesudo :nth-last-of-type(3) {
+	color: yellow;
+}
+
+div.pesudo :nth-child(2) {
+	color: orange;
+}
+div.pesudo :nth-of-type(2) {
+	color: lavender;
+}
+div.parent :only-child {
+	color: skyblue;
+}
+input[type='text']:focus {
+	width: 500px;
+	height: 30px;
+	border: 1px solid red;
+	outline: none;
+}
+input[type='checkbox']:checked {
+	width: 300px;
+	height: 300px;
+}
+
+div.nav-link a:active {
+	color: yellow;
+}
+div.nav-link a:visited {
+	color: red;
+}
+div.nav-link a:link {
+	color: violet;
+}
+div.nav-link a:hover {
+	color: pink;
+}
+
+p.trump::first-letter {
+	font-size: 50px;
+	color: red;
+}
+p.trump::first-line {
+	color: skyblue;
+}
+p.trump::before {
+	/* content: url('../images/icon.png'); */
+	content:'LPHP2010E';
+}
+p.trump::after {
+	content: ' CSS basic';
+}
+p.trump::selection {
+	color: yellow;
+}
+
+
+
+
+
+
+
+
+
+
