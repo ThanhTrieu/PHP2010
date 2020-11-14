@@ -47,14 +47,14 @@ div.box p.text {
 .boxs {
 	width: 300px;
 	height: 300px;
-	float: left;
+/* 	float: left; */
 }
 .box-1 {
 	background-color: green;
 }
 .box-2 {
 	background-color: blue;
-	/* display: none; */
+	display: none;
 	/* visibility: hidden; */
 }
 .box-3 {
@@ -64,7 +64,7 @@ div.box p.text {
 	display: block;
 } */
 div.parent {
-	width: 900px; 
+	width: 300px; 
 }
 div.parent-2 {
 	margin-left: 50px;
