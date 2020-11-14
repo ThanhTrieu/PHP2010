@@ -1,0 +1,93 @@
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	border: 0;
+}
+
+h1.title {
+	/* do bong cho van ban */
+	text-shadow: black 10px 5px 10px;
+}
+div.content {
+	width: 300px;
+	height: 300px;
+	/* background-color: pink; */
+	/* background-image: url('../images/icon.png'); */
+	/* background-repeat: no-repeat; */
+	/* background-position: center center; */
+	/* background-size: 100% 100%; */
+	/* background-attachment: scroll; */
+	background: pink url('../images/icon.png') no-repeat center center scroll;
+	display: inline-block;
+}
+div.box {
+	display: inline-block;
+	background-color: yellow;
+	/* border: 1px dotted red; */
+/* 	border-top-width: 1px; 
+	border-top-style: dotted;
+	border-top-color: red; */
+	width: 300px;
+	height: 300px;
+	/* margin-top: 25px; */
+	/* padding-left: 20px;
+	padding-top: 20px; */
+	/* padding: 20px 0px 0px 20px; */
+	margin-left: -4px;
+}
+div.box p.text {
+/* 	margin-top: 20px; */
+	/* padding-top: 20px;
+	background-color: yellow;
+	border: 1px solid blue; */
+}
+.boxs {
+	width: 300px;
+	height: 300px;
+	float: left;
+}
+.box-1 {
+	background-color: green;
+}
+.box-2 {
+	background-color: blue;
+	/* display: none; */
+	/* visibility: hidden; */
+}
+.box-3 {
+	background-color: yellow;
+}
+/* .box-1:hover + .box-2 {
+	display: block;
+} */
+div.parent {
+	width: 900px; 
+}
+div.parent-2 {
+	margin-left: 50px;
+}
+div.parent-2 a {
+	/* display: block; */
+	display: list-item;
+}
+.clear {
+	clear: both;
+}
+.position {
+	width: 300px;
+	height: 300px;
+	border: 1px solid red;
+	/* position: relative; */
+}
+img.avatar {
+	position: relative;
+	top: -100px;
+	/* position: absolute;
+	top: -100px; */
+}
+
+
+
