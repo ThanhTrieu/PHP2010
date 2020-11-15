@@ -1,0 +1,71 @@
+/* reset css */
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+html {
+	font-size: 62.5%;
+	/* 1rem = 10px */
+}
+body {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	line-height: 1;
+}
+/* bien css */
+:root {
+	--bgColorNav: #78B43D;
+	--hoverColor: #E1F8CB;
+	--hoverColorText: blue;
+}
+a {
+	text-decoration: none;
+	display: block;
+}
+ul {
+ list-style: none;
+}
+
+.nav {
+	width: 20rem;
+	background-color: var(--bgColorNav);
+	margin-left: 1rem; 
+}
+.nav__menu {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+.nav__item {
+	padding: 1.5rem 0.5rem;
+	border-bottom: 1px solid black ;
+	position: relative;
+}
+.nav__item:last-child {
+	border: none;
+}
+.nav__item:hover {
+	background-color: var(--hoverColor);
+	cursor: pointer;
+}
+.nav__item:hover > .nav__link {
+	color: var(--hoverColorText);
+}
+/* menu dropdown */
+.nav__dropdown {
+	display: none;
+	width: 20rem;
+	background-color:  var(--bgColorNav);
+	position: absolute;
+	left: 20rem;
+	top: 0px;
+}
+.nav__item:hover > .nav__dropdown {
+	display: block;
+}
+
+
