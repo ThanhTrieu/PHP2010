@@ -41,6 +41,20 @@ a {
 }
 .nav__item {
 	padding: 0px 1.6rem;
+	position: relative;
+	line-height: 4.5rem;
+}
+/* CSS menu drop-down */
+.nav__dropdown {
+	display: none;
+	width: 20rem;
+	background-color: var(--bgColor);
+	position: absolute;
+	top: 4.5rem;
+	left: 0;
+}
+.nav__item:hover .nav__dropdown {
+	display: block;
 }
 
 

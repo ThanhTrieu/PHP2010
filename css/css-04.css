@@ -1,0 +1,47 @@
+.box {
+	width: 150px;
+	height: 200px;
+	border: 1px solid red;
+	/* overflow: hidden; */
+	/* overflow-y: scroll; */
+	/* overflow: scroll; */
+	overflow: auto;
+}
+.container {
+	width: 980px;
+	min-height: 600px;
+	margin: auto;
+}
+.container .child-1 {
+	width: 50%;
+	height: 600px;
+	float: left;
+	background-color: yellow;
+}
+.container .child-2 {
+	width: 50%;
+	height: 600px;
+	float: left;
+	background-color: blue;
+}
+
+/* responsive */
+@media only all and (min-width: 411px) and (max-width: 736px) {
+	.container .child-1 {
+		width: 100%;
+		float: none;
+		height: 600px;
+		background-color: pink;
+	}
+
+	.container .child-2 {
+		width: 100%;
+		float: none;
+		height: 600px;
+		background-color: violet;
+	}
+}
+
+
+
+
