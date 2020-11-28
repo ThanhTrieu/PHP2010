@@ -1,0 +1,59 @@
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	border:  0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+html {
+	font-size: 62.5%;
+	/* 1rem = 10px */
+}
+body {
+	font-family: 'Lato', sans-serif;
+	line-height: 1;
+	font-weight: 400;
+}
+a {
+	text-decoration: none;
+}
+img {
+	display: block;
+	max-width: 100%;
+}
+button {
+	cursor: pointer;
+}
+input, button, textarea {
+	outline: none;
+	font-family: 'Lato', sans-serif;
+	box-shadow: none;
+}
+
+/* CSS tempalte */
+/* wrapper */
+.wrapper {
+	max-width: 160rem;
+	margin: 0 auto;
+}
+/* header */
+.header {
+	min-height: 80rem;
+	background-image: url('../test/img-bg-header.jpg');
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+
+
+
