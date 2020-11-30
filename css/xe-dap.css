@@ -33,6 +33,16 @@ input, button, textarea {
 	font-family: 'Lato', sans-serif;
 	box-shadow: none;
 }
+:root {
+	--primary: #64c29e;
+	--heading: #353738;
+	--text: #848789;
+	--bg-white: #ffffff;
+	--bg-light: #f7f7f7;
+	--bg-dark: #282f35;
+	--input-border: #d3d7d9;
+	--input-text: #c8c8c8;
+}
 
 /* CSS tempalte */
 /* wrapper */
@@ -52,6 +62,117 @@ input, button, textarea {
 	display: flex;
 	justify-content: center;
 	align-items: flex-start;
+}
+.nav {
+	margin-top: 3.5rem;
+}
+.nav__list {
+	display: flex;
+	align-items: center;
+}
+.nav__item {
+	padding: 0 4rem;
+	position: relative;
+}
+
+.nav__item:first-child::after, .nav__item:nth-child(4)::after {
+	content: ".";
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	font-size: 2rem;
+}
+.nav__link {
+	position: relative;
+	display: block;
+	text-transform: uppercase;
+	color: var(--heading);
+	font-size: 1.3rem;
+	font-weight: 700;
+}
+.feature__header {
+	background-color: var(--bg-light);
+	padding: 11.8rem 1.5rem 14.4rem;
+	text-align: center;
+}
+.feature__img-top {
+	margin: 0 auto 3.1rem;
+}
+.feature__heading {
+	font-size: 1.8rem;
+	line-height: 1.6;
+	text-transform: uppercase;
+	color: var(--heading);
+	margin-bottom: 1.9rem;
+	text-align: center;
+	font-weight: bold;
+}
+.feature__header-desc {
+	color: var(--text);
+	font-size: 1.8rem;
+	line-height: 1.6;
+	max-width: 108rem;
+	margin: 0 auto;
+}
+/* ul.feature__list */
+.feature__item {
+	display: flex;
+	flex-flow: row wrap;
+	height: 60rem;
+	overflow: hidden;
+}
+.feature__item-img {
+	width: 67%;
+	position: relative;
+}
+.feature__item .img__bg {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+.feature__item .img__brand {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 2;
+}
+.feature__item-content {
+	width: 33%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.feature__item-content-top {
+	padding: 0 7rem;
+	position: relative;
+	background-color: var(--bg-white);
+	height: 67%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.feature__item-text {
+	font-size: 1.6rem;
+	line-height: 1.6;
+	color: var(--text);
+	text-align: justify;
+	position: relative;
+	padding-bottom: 3rem;
+}
+.feature__item-content-bottom {
+	height: 33%;
+}
+.feature__item:nth-child(2) .feature__item-img {
+	order: 2;
+}
+.feature__item:last-child > .feature__item-img {
+	width: 33%;
+}
+.feature__item:last-child > .feature__item-content {
+	width: 34%;
 }
 
 
