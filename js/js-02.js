@@ -186,11 +186,81 @@ console.log(firstEl, arrNumbersv2);
 
 
 let arrNumbersv3 = [1,2,3,4,5,6,7,8,9,10];
-let position = arrNumbersv3.indexOf(9);
-console.log(position);
+let position = arrNumbersv3.indexOf(9,9);
+let position2 = arrNumbersv3.lastIndexOf(9,9);
+console.log(position, position2);
 
+// dao nguoc vi tri cac phan tu trong mang
+// console.log(arrNumbersv3.reverse());
+// cat mang - khong lam anh huong mang ban dau
+let arrChild = arrNumbersv3.slice(3, 7);
+console.log(arrChild, arrNumbersv3);
 
+// thay the phan tu cua mang ban dau bang phan tu khac
+// lam thay doi truc tiep mang ban dau
+arrNumbersv3.splice(3, 3, 100,200,300);
+console.log(arrNumbersv3);
 
+// bien mang ve chuoi
+let subjects = ['html', 'css', 'js', 'php', 'mysql'];
+let newStrings = subjects.join();
+let newStrings2 = subject.toString();
+console.log(newStrings, newStrings2, typeof newStrings);
+// bien chuoi ve mang
+let sports = 'bong da, cau long, quan vot, bida';
+let arrSports = sports.split(',');
+console.log(arrSports);
+
+let stringNumbers = '10,2,30,45,5,16,71,8,9';
+// viet ham tim so lon nhat va nho nhat trong chuoi
+function timSoMinMax(string) {
+	let arr = string.split(',');
+	// tim so max ,min trong mang
+	let max = parseInt(arr[0]);
+	let count = arr.length;
+	for(let i = 0; i < count; i++) {
+		if(parseInt(arr[i]) > max){
+			max = arr[i];
+		}
+	}
+	return max;
+}
+console.log(timSoMinMax(stringNumbers));
+
+// kiem tra xem co phai la mang hay ko?
+if(Array.isArray(arrSports)){
+	console.log(`${arrSports} :  la mot mang`);
+} else {
+	console.log(`${arrSports} : khong phai la mang`);
+}
+
+let randomNumbers = [100,1,3,10,2,99,4,88,13];
+// sap xep mang
+randomNumbers.sort(function(a, b){
+	// tham so thu nhat la so bi tru
+	// tham so thu hai la so tru
+	// ==> Tang dan 
+	// va nguoc lai
+	return b - a;
+});
+console.log(randomNumbers);
+// cho mang
+let myNumbers = [100,300,9,400,10];
+// trong mang co ton tai so 9 ko ? neu co thay the no bang mot boi so bat ky cua no, neu ko them no vao dau mang
+//  viet ham
+let timKiemSo = function(arr, number) {
+	let position = arr.indexOf(number);
+	if(position === -1){
+		// ko tim thay
+		arr.unshift(number);
+	} else {
+		// tim thay
+		let n = number*number;
+		arr.splice(position,1,n);
+	}
+	return arr;
+}	
+console.log(timKiemSo(myNumbers, 9));
 
 
 
