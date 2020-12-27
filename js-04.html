@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>JS event</title>
+</head>
+<body onerror="errorPage();" onload="loadPage();" onresize="resizeWindow(this);">
+	<h1>JS Event</h1>
+	<!-- bat su kien cho button -->
+	<button type="button" onclick="hello();"> Click me</button>
+	<br>
+	<button type="button" ondblclick="myDbClick();"> db Click</button>
+	<br>
+	<input type="text" onblur="myBlur();" onfocus="myFocus();">
+	<br>
+	<select onchange="chooseGender(this)">
+		<option value="">Chon Gioi tinh</option>
+		<option value="1"> --- Nam --- </option>
+		<option value="2"> --- Nu --- </option>
+	</select>
+	<br>
+	<input type="text" onchange="getValueText(this);">
+	<br>
+	<input type="text" onkeyup="myKeyup(this)" onkeydown="myKeydown()" onkeypress="myKeyPress()">
+	<br>
+	<button type="button" onmousedown="myMousedown()" onmouseup="myMouseup()"> mouse event </button>
+	<br>
+	<div style="width: 300px; height: 300px; background-color: yellow;" onmouseover="myMouseover();" onmouseout="myMouseout()" onmousemove="myMouseMove();"></div>
+	<br>
+	<img width="200" height="200" src="images/icon.png" alt="" onmouseover="zoomIn(this)" onmouseout="zoomOut(this)">
+	<br>
+	<form id="formData" method="post" action="sever.php">
+		<label for="user"> nhap user</label>
+		<input type="text" onselect="selectText(this);">
+		<br>
+		<button type="button" onclick="sendData();"> Send Data </button>
+		<button type="button" onclick="resetData();"> Reset Data </button>
+	</form>
+
+	<script type="text/javascript">
+		window.onbeforeunload = function (){
+			return 'thoat';
+		}
+		function selectText(obj){
+			console.log('ban vua boi den chon van ban');
+			//console.log(obj.value);
+		}
+		function sendData(){
+			// dom truy cap vao form
+			let form = document.getElementById('formData');
+			// submit form
+			form.submit();
+		}
+		function resetData(){
+			// dom truy cap vao form
+			let form = document.getElementById('formData');
+			// reset data form
+			form.reset();
+		}
+		function resizeWindow(obj){
+			//console.log(obj);
+			console.log('kich thuoc cua so da thay doi');
+		}
+		function zoomIn(obj){
+			obj.width = 600;
+			obj.height = 600;
+		}
+		function zoomOut(obj) {
+			obj.width = 200;
+			obj.height = 200;
+		}
+		function myMouseMove(){
+			console.log('chuot dang di chuyen');
+		}
+		function myMouseover(){
+			console.log('chuot di chuyen tren phan tu');
+		}
+		function myMouseout(){
+			console.log('chuot di chuyen ra ngoai phan tu');
+		}
+		function myMouseup() {
+			console.log('ban khong bam vao con chuot');
+		}
+		function myMousedown(){
+			console.log('ban vua bam vao con chuot');
+		}
+		function myKeyPress() {
+			//console.log('tay dang giu ban phim');
+		}
+		function myKeydown(){
+			//console.log('tay nhan xuong ban phim');
+		}
+		function myKeyup(obj){
+			//console.log('tay roi ban phim');
+			let val = obj.value;
+			console.log(val);
+		}
+
+		function errorPage(){
+			console.log('khong tai dc trang');
+		}
+		function loadPage(){
+			console.log('tai trang hoan tat');
+		}
+		function getValueText(params){
+			let data = params.value;
+			console.log(data);
+		}
+		function chooseGender(obj){
+			//console.log(obj);
+			let gender = obj.value;
+			if(gender === '1'){
+				console.log('ban chon gioi tinh nam');
+			} else if (gender === '2') {
+				console.log('ban chon gioi tinh nu');
+			} else {
+				console.log('ban chua chon gioi tinh');
+			}
+		}
+		function myFocus(){
+			console.log('su kien focus vua xay ra');
+		}
+		function myBlur(){
+			console.log('su kien blur vua xay ra');
+		}
+		function hello() {
+			alert('ban vua click vao toi');
+		}
+		function myDbClick(){
+			console.log('ban vua click 2 lan lien tiep vao toi');
+		}
+	</script>
+</body>
+</html>
