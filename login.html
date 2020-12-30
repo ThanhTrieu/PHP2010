@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Login page</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-12 col-sm-12 col-md-6 offset-md-3 col-lg-6 offset-lg-3 col-xl-6 offset-xl-3">
+				<h1 class="text-center"> Login </h1>
+				<form class="border p-3">
+					<div class="form-group">
+						<label for="user">Username</label>
+						<input type="text" id="user" class="form-control">
+						<p id="error-user" class="text-danger"></p>
+					</div>
+					<div class="form-group">
+						<label for="pass">Password</label>
+						<input type="password" id="pass" class="form-control">
+						<p id="error-pass" class="text-danger"></p>
+					</div>
+					<button id="btnLogin" type="button" class="btn btn-primary"> Submit </button>
+				</form>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		let btnLogin = document.getElementById('btnLogin');
+		btnLogin.addEventListener('click', function(){
+			let inputUser = document.getElementById('user');
+			let inputPass = document.getElementById('pass');
+			let errUser = document.getElementById('error-user');
+			let errPass = document.getElementById('error-pass');
+			let valUser = inputUser.value;
+			let valPass = inputPass.value;
+			let checkUser = null;
+			let checkPass = null;
+			if(valUser !== ''){
+				checkUser = true;
+				// xoa thong bao loi
+				errUser.innerHTML = '';
+			} else {
+				// chua nhap du lieu vao input user
+				checkUser = false;
+				// hien thi thong bao loi
+				errUser.innerHTML = 'Vui long nhap username';
+			}
+
+			if(valPass !== ''){
+				checkPass = true;
+				errPass.innerHTML = '';
+			} else {
+				checkPass = false;
+				errPass.innerHTML = 'Vui long nhap password';
+			}
+
+			if(checkPass && checkUser){
+				// tien hanh login
+				// fake login - sau nay backend lam
+				if(valUser === 'admin' && valPass === '123'){
+					window.location.href = 'home.html';
+				} else {
+					alert('Tai khoan khong dung');
+				}
+			}
+		});
+	</script>
+</body>
+</html>

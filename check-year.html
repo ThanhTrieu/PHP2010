@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Check year</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-12 col-sm-12 col-md-6 offset-md-3 col-lg-6 offset-lg-3 col-xl-6 offset-xl-3">
+				<h1 class="text-center">Kiem tra nam nhuan DL</h1>
+				<form class="border p-4">
+					<div class="form-group">
+						<label for="txtYear">Moi nhap nam</label>
+						<input type="text" class="form-control" id="txtYear">
+						<p class="text-danger" id="errYear"></p>
+					</div>
+					<button type="button" id="btnCheck" class="btn btn-primary"> Kiem Tra</button>
+				</form>
+				<h5 class="text-info my-3" id="result"></h5>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		btnCheck.onclick = function() {
+			let valYear = txtYear.value;
+			if(!isNaN(valYear) && valYear !== ''){
+				errYear.innerHTML = '';
+				// ep ve so
+				valYear = parseFloat(valYear);
+				// kiem tra nam nhuan DL
+				if(valYear % 400 === 0){
+					result.innerHTML = `${valYear} la nam nhuan DL`;
+				} else if (valYear % 4 === 0 && valYear % 100 !== 0) {
+					result.innerHTML = `${valYear} la nam nhuan DL`;
+				} else {
+					result.innerHTML = `${valYear} khong la nam nhuan DL`;
+				}
+			} else {
+				errYear.innerHTML = 'Vui long nhap so';
+				result.innerHTML  = '';
+			}
+		}
+	</script>
+</body>
+</html>

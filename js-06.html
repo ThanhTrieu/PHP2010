@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>JS - 05</title>
+</head>
+<body>
+	<h1> Javascript</h1>
+	<button id="open" type="button"> open window </button>
+	<br>
+	<button type="button" onclick="reloadPage();"> Reload page</button>
+	<br>
+	<button onclick="goToFb();"> go to FB</button>
+	<br>
+	<button onclick="forwardPage();"> Forward page</button>
+	<button onclick="backPage();"> Back page</button>
+
+	<script type="text/javascript">
+		function backPage() {
+			// quay lai trang truoc do
+			history.back(); 
+		}
+		function forwardPage() {
+			// di toi trang truoc do
+			history.forward();
+		}
+		// xac dinh kich thuoc cua so trinh duyet
+		// window : BOM 
+		let w = window.innerWidth;
+		let h = window.innerHeight;
+		console.log(w, h);
+		let btnOpen = document.getElementById('open');
+		btnOpen.onclick = function(){
+			// mo ra 1 cua so trinh duyet
+			window.open('https://vnexpress.net/', 'vnexpress','width=300,height=300');
+		}
+
+		function reloadPage() {
+			// tai lai trang web
+			window.location.reload(true);
+		}
+
+		function goToFb() {
+			window.location.href = 'https://facebook.com';
+		}
+
+		// kich thuoc man hinh hien thi
+		let wScreen = screen.width;
+		let hScreen = screen.height;
+		console.log(wScreen, hScreen);
+	</script>
+</body>
+</html>
