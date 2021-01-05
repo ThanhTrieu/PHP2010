@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>jQuery</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-12 col-sm-12 col-md-6 offset-md-3 col-lg-6 offset-lg-3 col-xl-6 offset-xl-3">
+				<h1 class="text-center"> Tong 2 so </h1>
+				<form class="border p-3">
+					<div class="form-group">
+						<label>So thu nhat</label>
+						<input type="text" class="form-control" id="number_1" />
+						<p class="text-danger" id="errNumber_1"></p>
+					</div>
+					<div class="form-group">
+						<label>So thu hai</label>
+						<input type="text" class="form-control" id="number_2" />
+						<p class="text-danger" id="errNumber_2"></p>
+					</div>
+					<button type="button" class="btn btn-primary" id="totalNumber"> Tong </button>
+				</form>
+				<h3 class="text-center" id="result"></h3>
+			</div>
+		</div>
+	</div>
+	<script src="js/jquery-3.5.1.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('#totalNumber').click(function(){
+				let valNumber1 = $('#number_1').val().trim();
+				let valNumber2 = $('#number_2').val().trim();
+				let chk1 = null;
+				let chk2 = null;
+
+				if($.isNumeric(valNumber1)){
+					chk1 = true;
+					$('#errNumber_1').text('');
+				} else {
+					chk1 = false;
+					$('#errNumber_1').text('Vui long nhap so');
+				}
+
+				if($.isNumeric(valNumber2)){
+					chk2 = true;
+					$('#errNumber_2').text('');
+				} else {
+					chk2 = false;
+					$('#errNumber_2').text('Vui long nhap so');
+				}
+
+				if(chk2 && chk1){
+					valNumber1 = parseFloat(valNumber1);
+					valNumber2 = parseFloat(valNumber2);
+					let sum = valNumber1 + valNumber2;
+					$('#result').text(`Ket qua la: ${sum}`);
+				} else {
+					$('#result').text('');
+				}
+
+			});
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>jQuery</title>
+	<style type="text/css">
+		.box {
+			width: 500px;
+			height: 500px;
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+	<button type="button" id="btn">click me </button>
+	<button type="button" id="btn2">click me 2</button>
+	<br/>
+	<div class="box"></div>
+
+	<script type="text/javascript" src="js/jquery-3.5.1.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('#btn').click(function(){
+				// $('.box').fadeOut();
+				// $('.box').hide(3000);
+				//$('.box').slideUp(3000);
+				$('.box').fadeToggle(3000);
+			});
+
+			$('#btn2').click(function(){
+				// $('.box').fadeIn();
+				// $('.box').show(3000);
+				$('.box').slideDown(3000);
+			});
+		});
+	</script>
+</body>
+</html>
